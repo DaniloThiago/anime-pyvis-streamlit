@@ -1,6 +1,6 @@
+from pyvis.network import Network
 import random
 import pandas as pd
-from pyvis.network import Network
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -16,7 +16,7 @@ got_net = Network(
 )
 
 got_net.barnes_hut()
-got_data = pd.read_csv("../Anime.csv")
+got_data = pd.read_csv("./Anime.csv")
 filtered_data = got_data.query('Release_year >= 2022.0')
 filtered_data = filtered_data.loc[:, ['Name', 'Voice_actors']]
 filtered_data = filtered_data.dropna(subset=['Voice_actors'])
