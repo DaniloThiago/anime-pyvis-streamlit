@@ -1,11 +1,11 @@
 import random
 import pandas as pd
-from pyvis import network as net
+from pyvis.network import Network
 import streamlit as st
 import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
-got_net = net.Network(
+got_net = Network(
     notebook=True,
     cdn_resources="remote",
     bgcolor="#222222",
